@@ -1,16 +1,16 @@
+$(document).ready(function() {
 
-var randomNumber = 0;
-var wins = 0;
-var losses = 0;
-var finalScore = 0;
-var gemsValues;
-var gemsValue;
-var gemsOne;
-var gemsTwo;
-var gemsThree;
-var gemsFour;
-
-$(document).ready(function() { 
+    var randomNumber = 0;
+    var wins = 0;
+    var losses = 0;
+    var finalScore = 0;
+    var gemsValues;
+    var gemsValue;
+    var gemsOne;
+    var gemsTwo;
+    var gemsThree;
+    var gemsFour;
+ 
     function startGame() {
         reset();
 
@@ -25,29 +25,29 @@ $(document).ready(function() {
             }
         }
         // game play
-            $(".one").on("click", function() { 
+            $("#one").on("click", function() { 
                 gemOne = parseInt(gemValues[0]);
                 finalScore += gemOne;
                 $("#final-score").text(finalScore);
                 winsLosses();
             });
 
-            $(".two").on("click", function() { 
-                gemsTwo = parseInt(gemValues[1]);
+            $("#two").on("click", function() { 
+                gemsTwo = parseInt(gemValues[0]);
                 finalScore += gemsTwo;
                 $("#final-score").text(finalScore);
                 winsLosses();
             });
 
-            $(".three").on("click", function() {
-                gemsThree = parseInt(gemValues[2]);
+            $("#three").on("click", function() {
+                gemsThree = parseInt(gemValues[0]);
                 finalScore += gemsThree;
                 $("#final-score").text(finalScore);
                 winsLosses();
             });
 
-            $(".four").on("click", function() {
-                gemsFour = parseInt(gemValues[3]);
+            $("#four").on("click", function() {
+                gemsFour = parseInt(gemValues[0]);
                 finalScore += gemsFour;
                 $("#final-score").text(finalScore);
                 winsLosses();
